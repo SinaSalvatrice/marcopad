@@ -2,7 +2,7 @@
 
 ![marcopad](https://i.imgur.com/AnC9SeW.png)
 
-*A compact 3x3 keys macropad built with RP-2040 Zero*
+*A compact 3x3 keys macropad built with Pro Micro*
 
 * Keyboard Maintainer: [pelegrini.ca](https://pelegrini.ca/marcopad)
 * Hardware Supported: [MarcoPad](https://pelegrini.ca/marcopad)
@@ -20,8 +20,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Bootloader
 
-Enter the bootloader in 3 ways:
+Enter the bootloader in 2 ways:
 
 * **Bootmagic reset**: Hold down the key at (0,0) in the matrix (top left key) and plug in the keyboard
-* **Physical reset button**: Using 2 paperclips, press and hold the BOOT button, then short press the RESET button on the back of the MarcoPad
-* **Physical reset button + plug in**: Using a paperclip, press and hold the BOOT button, then plug in the MarcoPad
+* **Physical reset button**: Briefly short the RST pin to GND twice within 750ms (double-tap reset) to enter the Caterina bootloader

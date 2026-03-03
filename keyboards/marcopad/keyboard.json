@@ -2,17 +2,17 @@
     "manufacturer": "pelegrini.ca",
     "keyboard_name": "MarcoPad",
     "maintainer": "Marco Pelegrini",
-    "bootloader": "rp2040",
+    "bootloader": "caterina",
     "diode_direction": "ROW2COL",
     "features": {
         "bootmagic": true,
         "rgb_matrix": true
     },
     "matrix_pins": {
-        "cols": ["GP4", "GP26", "GP27"],
-        "rows": ["GP15", "GP14", "GP29"]
+        "cols": ["F4", "F5", "F6"],
+        "rows": ["B1", "B3", "B2"]
     },
-    "processor": "RP2040",
+    "processor": "atmega32u4",
     "rgb_matrix": {
         "animations": {
             "breathing": true,
@@ -57,8 +57,8 @@
         "vid": "0xFEED"
     },
     "ws2812": {
-        "driver": "vendor",
-        "pin": "GP28"
+        "driver": "bitbang",
+        "pin": "D4"
     },
     "community_layouts": ["ortho_3x3"],
     "layouts": {
