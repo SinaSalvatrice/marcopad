@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Sina",
+  "keyboard_name": "rp2040zero_3x3_via",
+  "maintainer": "Sina",
+  "processor": "RP2040",
+  "bootloader": "rp2040",
+  "diode_direction": "COL2ROW",
+  "usb": {
+    "vid": "0x1209",
+    "pid": "0x3A3A",
+    "device_version": "0.1.0"
+  },
+  "matrix_pins": {
+    "cols": [
+      "GP5",
+      "GP6",
+      "GP7"
+    ],
+    "rows": [
+      "GP2",
+      "GP3",
+      "GP4"
+    ]
+  },
+  "encoder": {
+    "rotary": [
+      {
+        "pin_a": "GP8",
+        "pin_b": "GP9",
+        "resolution": 4
+      }
+    ]
+  },
+  "layouts": {
+    "LAYOUT_3x3": {
+      "layout": [
+        {
+          "matrix": [
+            0,
+            0
+          ],
+          "x": 0,
+          "y": 0
+        },
+        {
+          "matrix": [
+            0,
+            1
+          ],
+          "x": 1,
+          "y": 0
+        },
+        {
+          "matrix": [
+            0,
+            2
+          ],
+          "x": 2,
+          "y": 0
+        },
+        {
+          "matrix": [
+            1,
+            0
+          ],
+          "x": 0,
+          "y": 1
+        },
+        {
+          "matrix": [
+            1,
+            1
+          ],
+          "x": 1,
+          "y": 1
+        },
+        {
+          "matrix": [
+            1,
+            2
+          ],
+          "x": 2,
+          "y": 1
+        },
+        {
+          "matrix": [
+            2,
+            0
+          ],
+          "x": 0,
+          "y": 2
+        },
+        {
+          "matrix": [
+            2,
+            1
+          ],
+          "x": 1,
+          "y": 2
+        },
+        {
+          "matrix": [
+            2,
+            2
+          ],
+          "x": 2,
+          "y": 2
+        }
+      ]
+    }
+  }
+}
