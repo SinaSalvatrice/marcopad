@@ -3,7 +3,7 @@ name: Build UF2 (rp2040zero_3x3_via)
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     paths:
       - "keyboards/sina/rp2040zero_3x3_via/**"
       - ".github/workflows/build_uf2.yml"
@@ -12,6 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout (your repo)
         uses: actions/checkout@v4
@@ -19,7 +20,10 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-pip git rsync
+          sudo apt-get install -y \
+            git rsync \
+            gcc-arm-none-eabi binutils-arm-none-eabi \
+            python3-pip
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,7 +42,8 @@ jobs:
       - name: Copy keyboard into QMK tree
         run: |
           mkdir -p ~/qmk_firmware/keyboards/sina/rp2040zero_3x3_via
-          rsync -a --delete keyboards/sina/rp2040zero_3x3_via/ ~/qmk_firmware/keyboards/sina/rp2040zero_3x3_via/
+          rsync -a --delete keyboards/sina/rp2040zero_3x3_via/ \
+            ~/qmk_firmware/keyboards/sina/rp2040zero_3x3_via/
 
       - name: Compile UF2
         working-directory: ~/qmk_firmware
